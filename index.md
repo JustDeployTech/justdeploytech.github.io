@@ -1,38 +1,68 @@
 ---
-title: Home
+title: 🚀 Get Started
 layout: home
 nav_order: 1
 ---
 
-## Focus on writing good documentation
+## Hey builder, it's time to deploy! 👋
 
-This is a *bare-minimum* template to create a Jekyll site that uses the [Just the Docs] theme. You can easily set the created site to be published on [GitHub Pages] – the [README] file explains how to do that, along with other details.
+Here's a quick overview of this deploying tool. Follow along to get your environment up and running.
 
-If [Jekyll] is installed on your computer, you can also build and preview the created site *locally*. This lets you test changes before committing them, and avoids waiting for GitHub Pages.[^1] And you will be able to deploy your local build to a different platform than GitHub Pages.
+Once you're done, start with [this tutorial](/tutorials/step1) to setup your server in 5 minutes. Let's build that startup, FAST ⚡️
 
-More specifically, the created site:
+### Install Ansible Locally
 
-- uses a gem-based approach, i.e. uses a `Gemfile` and loads the `just-the-docs` gem
-- uses the [GitHub Pages / Actions workflow] to build and publish the site on GitHub Pages
+Ansible is an open-source automation platform used to streamline IT tasks, manage infrastructure, and automate workflows across various systems and environments.
 
-Other than that, you're free to customize sites that you create with this template, however you like. You can easily change the versions of `just-the-docs` and Jekyll it uses, as well as adding further plugins.
+#### Mac OS
+{: .fs-5 .text-blue-000 }
 
-[Browse our documentation][Just the Docs] to learn more about how to use this theme.
+To install Ansible on a Mac, you can use Homebrew. First, ensure you have Homebrew installed. If not, you can install it by running the following command in your terminal:
 
-To get started with creating a site, simply:
+```shell
+/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+```
 
-1. click "[use this template]" to create a GitHub repository
-2. go to Settings > Pages > Build and deployment > Source, and select GitHub Actions
+Once Homebrew is installed, you can install Ansible by running:
 
-If you want to maintain your docs in the `docs` directory of an existing project repo, see [Hosting your docs from an existing project repo](https://github.com/just-the-docs/just-the-docs-template/blob/main/README.md#hosting-your-docs-from-an-existing-project-repo) in the template README.
+```shell
+brew install ansible
+```
 
-----
+#### Linux
+{: .fs-5 .text-blue-000 }
 
-[^1]: [It can take up to 10 minutes for changes to your site to publish after you push the changes to GitHub](https://docs.github.com/en/pages/setting-up-a-github-pages-site-with-jekyll/creating-a-github-pages-site-with-jekyll#creating-your-site).
+On Linux systems, you can typically install Ansible using the package manager specific to your distribution.
 
-[Just the Docs]: https://just-the-docs.github.io/just-the-docs/
-[GitHub Pages]: https://docs.github.com/en/pages
-[README]: https://github.com/just-the-docs/just-the-docs-template/blob/main/README.md
-[Jekyll]: https://jekyllrb.com
-[GitHub Pages / Actions workflow]: https://github.blog/changelog/2022-07-27-github-pages-custom-github-actions-workflows-beta/
-[use this template]: https://github.com/just-the-docs/just-the-docs-template/generate
+For example, on Ubuntu or Debian-based systems, you can use apt:
+
+```shell
+sudo apt update
+sudo apt install ansible
+```
+
+On CentOS or Red Hat Enterprise Linux (RHEL), you can use yum:
+
+```shell
+sudo yum install ansible
+```
+
+#### Windows
+{: .fs-5 .text-blue-000 }
+
+On Windows, Ansible can be installed via the [Windows Subsystem for Linux (WSL)](https://docs.microsoft.com/en-us/windows/wsl/install-win10) or by using a third-party tool like Cygwin.
+
+For WSL installation, you can follow the official Microsoft documentation on how to set up WSL. After having installed WSL, you can [install Ansible through apt](https://docs.ansible.com/ansible/latest/user_guide/windows_faq.html#can-ansible-run-on-windows) similar to Linux users.
+
+Once Ansible is installed, you can verify the installation by running:
+
+```shell
+ansible --version
+```
+
+This command should display the installed Ansible version.
+
+{: .highlight }
+> Watch out for the version
+>
+> Make sure you're using version 2.1 or higher. Older versions haven't been tested and might not work.

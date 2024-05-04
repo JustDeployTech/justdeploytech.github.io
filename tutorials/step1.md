@@ -2,8 +2,9 @@
 layout: default
 title: "Step 1: SSH Keys or Nah?"
 nav_order: 1
-parent: Configuration
+parent: 📚 Tutorials
 ---
+## To SSH or Not?
 
 SSH keys offer superior security over passwords due to their strong encryption, elimination of password sharing, immunity to password guessing attacks, and ease of revocation and central management. Their random, lengthy nature makes them highly resistant to brute-force attacks and enhances overall security, particularly in environments with multiple users or systems.
 
@@ -11,11 +12,17 @@ SSH keys offer superior security over passwords due to their strong encryption, 
 
 The tradeoff with SSH keys lies in the complexity of key management, including generation, distribution, and revocation, which can become a single point of failure if not properly secured. While offering enhanced security, SSH keys lack the flexibility of password-based authentication, particularly in scenarios requiring access from untrusted devices or locations, necessitating careful consideration of security versus usability and operational concerns.
 
-## YOLO
+## Options
+
+### YOLO
 
 Just add your SSH username to `ansible_user` in `{{ site.domain }}/inventory` and you're good to go.
 
-## But security...
+### But security...
+{: .d-inline-block }
+
+Recommended
+{: .label .label-green }
 
 I hear you, in that case there's a few extra steps we will need.
 

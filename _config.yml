@@ -1,12 +1,35 @@
-title: JustDeploy.tech
+title: JustDeploy.tech Docs
 description: Docs for deploying your website effortlessly in minutes and not hours.
 theme: just-the-docs
 color_scheme: dark
+logo: "/assets/images/logo.png"
+favicon_ico: "/assets/images/favicon.ico"
 
 url: https://justdeploytech.github.io
 
-aux_links:
-  Template Repository: https://github.com/just-the-docs/just-the-docs-template
-
 # Variables across the site
+project: JustDeploy.tech
 domain: justdeploy.tech
+
+callouts_level: loud # or loud
+callouts:
+  highlight:
+    color: yellow
+  important:
+    title: Important
+    color: blue
+  new:
+    title: New
+    color: green
+  note:
+    title: Note
+    color: purple
+  warning:
+    title: Warning
+    color: red
+
+# External navigation links
+nav_external_links:
+  - title: Get JustDeploy.tech
+    url: https://www.justdeploy.tech
+    opens_in_new_tab: true
