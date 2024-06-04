@@ -14,6 +14,15 @@ Idempotency is important because it's totally normal to change your mind and wan
 
 If you completely change your mind and want to revert every change this script makes, just go ahead and read about our [teardown task](/extras/teardown).
 
+## Updating the inventory
+
+If you created a new user in the previous step, you'll need to update the inventory file with the new user's username. For security reasons we always like to disable root login in that case, so open up `inventory` for one last time and change the `ansible_user` value to the new user's username. I.e.:
+
+```sh
+[vps:vars]
+ansible_user=teddy
+```
+
 ## Running your first task
 
 The `ansible-playbook` command is used to execute Ansible playbooks, which are YAML files containing a series of tasks and configurations to be applied to target hosts.
@@ -33,7 +42,12 @@ The `ansible-playbook` command is used to execute Ansible playbooks, which are Y
 Open up your terminal and from within the ` {{site.project}} ` directory execute:
 
 ```shell
-ansible-playbook -i inventory 01.server_setup.yml -kK
+ansible-playbook -i inventory 01.server_setup.yml
 ```
 
-This command executes the playbook `01.server_setup.yml` on the hosts specified in the `inventory` file, prompting for both the SSH password (`-k`) and privilege escalation password (`-K`).
+## What's Next?
+
+We're so close. Head to Step 3 to run JustDeploy on your server.\
+<span class="fs-6 float-right"> 
+  [🚀 Step 3 >>](/tutorials/step3){: .btn }
+</span>

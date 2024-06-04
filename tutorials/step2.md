@@ -118,3 +118,10 @@ Recommended
 ### `github_repo`
 
 - **Description**: The name of the GitHub repository where your application code lives.
+
+## What's Next?
+
+We're so close. Head to Step 3 to run JustDeploy on your server.\
+<span class="fs-6 float-right"> 
+  [🚀 Step 3 >>](/tutorials/step3){: .btn }
+</span>

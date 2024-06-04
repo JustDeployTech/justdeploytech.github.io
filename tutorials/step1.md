@@ -16,15 +16,20 @@ The tradeoff with SSH keys lies in the complexity of key management, including g
 
 ### YOLO
 
-Just add your SSH username to `ansible_user` in `{{ site.domain }}/inventory` and you're good to go.
+Just add your SSH username to `ansible_user` in `{{ site.domain }}/inventory` and you're good to go. You will also likely need to enable password authentication in your `sshd_config` file. Here's a link on how to do that: [Enable Password Authentication](/extras/enable-password-authentication)
 
-### But security...
+### But security..
 {: .d-inline-block }
 
 Recommended
 {: .label .label-green }
 
 I hear you, in that case there's a few extra steps we will need.
+
+{: .note-title }
+> NOTE
+>
+> If you're using a DigitalOcean Droplet chances are you've already done this. If you're not sure, you can check by running ssh `root@your_server_ip` in your favorite terminal. If you're prompted for a password or get the message `Permission denied (publickey)`, you'll need to follow the steps below.
 
 1. Generate SSH Key Pair:
 
@@ -56,6 +61,8 @@ I hear you, in that case there's a few extra steps we will need.
     ssh username@hostname
     ```
 
+   ![Public Key Add](/assets/images/public-key-add.png)
+
 4. Update Ansible Inventory:
 
     - Once SSH key-based authentication is working, you can update your Ansible `inventory` file (vps:vars) to use the SSH key for authentication instead of a password. Make sure you uncomment `ansible_ssh_private_key_file`
@@ -64,3 +71,10 @@ I hear you, in that case there's a few extra steps we will need.
     ansible_user=username 
     ansible_ssh_private_key_file=~/.ssh/id_rsa
     ```
+
+## What's Next?
+
+Now it's time we head to Step 2 to configure JustDeploy\
+<span class="fs-6 float-right"> 
+  [⚙️ Step 2](/tutorials/step2){: .btn }
+</span>
