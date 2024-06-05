@@ -60,5 +60,5 @@ sudo systemctl restart sshd
 
 Click here to head back to configuring JustDeploy\
 <span class="fs-6 float-right"> 
-  [💥 Step 1](/tutorials/step1){: .btn }
+  [💥 Step 1{% link tutorials/step1.md %}){: .btn }
 </span>

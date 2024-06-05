@@ -173,7 +173,7 @@ By configuring these fields, you can define the specifics of your application de
 
 ### `github_token`
 
-- **Description**: Your GitHub access token. You can get some help to generate one by following the simple steps [here](/extras/github-access-token.md)
+- **Description**: Your GitHub access token. You can get some help to generate one by following the simple steps [here]({% link extras/github-access-token.md %})
 
 ### `github_repo`
 
@@ -183,5 +183,5 @@ By configuring these fields, you can define the specifics of your application de
 
 We're so close. Head to Step 3 to run JustDeploy on your server.\
 <span class="fs-6 float-right"> 
-  [🚀 Step 3 >>](/tutorials/step3){: .btn }
+  [🚀 Step 3 >>]({% link tutorials/step3.md %}){: .btn }
 </span>

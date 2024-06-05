@@ -12,7 +12,7 @@ Runs are idempotent (/ʌɪdɛmˈpəʊtnt/), which is a fancy way of saying "if y
 
 Idempotency is important because it's totally normal to change your mind and want to do things a little different.
 
-If you completely change your mind and want to revert every change this script makes, just go ahead and read about our [teardown task](/extras/teardown).
+If you completely change your mind and want to revert every change this script makes, just go ahead and read about our [teardown task]({% link extras/teardown.md %}).
 
 ## Updating the inventory
 
@@ -49,5 +49,5 @@ ansible-playbook -i inventory 01.server_setup.yml
 
 The server is configured, it's time we setup your application(s).\
 <span class="fs-6 float-right"> 
-  [🚀 Step 4 >>](/tutorials/step4){: .btn }
+  [🚀 Step 4 >>]({% link tutorials/step4.md %}){: .btn }
 </span>

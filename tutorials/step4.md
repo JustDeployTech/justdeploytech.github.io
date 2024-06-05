@@ -15,7 +15,7 @@ Regardless of how big your apps are, running `npm install` for the first time is
 
 We've got you covered though 💪, we've setup a swap file for you. This is a file on your server that acts like extra memory. It's slower than real memory, but it's better than nothing, and for running `npm install` it's usually enough.
 
-If you're on a server with less than 1GB of memory, head to to the [swap section](/extras/swap.html) to learn more about how to set up a swap file.
+If you're on a server with less than 1GB of memory, head to to the [swap section]({% link extras/swap.md %}) to learn more about how to set up a swap file.
 
 ## Running your server task
 
@@ -44,5 +44,5 @@ This command runs the `02.application_setup.yml` playbook, which contains the ta
 Your apps are up and running 🚀! You can check them out and see that everything is working as expected.
 
 <span class="fs-6 float-right"> 
-  [Checking your apps](/extras/checking.html){: .btn }
+  [Checking your apps]({% link extras/checking.md %}){: .btn }
 </span>

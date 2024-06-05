@@ -49,4 +49,4 @@ Or simply by rerunning the playbook above and seeing that the task "Create swap 
 
 Using swap is a practical way to extend the available memory on your server, especially when upgrading physical RAM isn't an immediate option. With Ansible, automating the setup of a swap file is straightforward and ensures consistency across your infrastructure.
 
-If you just came here to set this up and are ready to run your applications, [click here](/tutorials/step4.html) and I’ll take you back there.
+If you just came here to set this up and are ready to run your applications, [click here]({% link tutorials/step4.md %}) and I’ll take you back there.

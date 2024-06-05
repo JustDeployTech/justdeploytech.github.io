@@ -24,5 +24,5 @@ Just deploy can be downloaded anywhere but I always recommend downloading it in 
 
 Time to officially get this party started! Head to Step 1 to configure your security settings\
 <span class="fs-6 float-right"> 
-  [💥 Step 1](/tutorials/step1){: .btn }
+  [💥 Step 1]({% link tutorials/step1.md %}){: .btn }
 </span>

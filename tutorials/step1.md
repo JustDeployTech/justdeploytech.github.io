@@ -16,7 +16,7 @@ The tradeoff with SSH keys lies in the complexity of key management, including g
 
 ### YOLO
 
-Just add your SSH username to `ansible_user` in `{{ site.domain }}/inventory` and you're good to go. You will also likely need to enable password authentication in your `sshd_config` file. Here's a link on how to do that: [Enable Password Authentication](/extras/enable-password-authentication)
+Just add your SSH username to `ansible_user` in `{{ site.domain }}/inventory` and you're good to go. You will also likely need to enable password authentication in your `sshd_config` file. Here's a link on how to do that: [Enable Password Authentication]({% link extras/enable-password-authentication.md %})
 
 ### But security..
 {: .d-inline-block }
@@ -61,7 +61,7 @@ I hear you, in that case there's a few extra steps we will need.
     ssh username@hostname
     ```
 
-   ![Public Key Add](/assets/images/public-key-add.png)
+   ![Public Key Add]({{ '/assets/images/public-key-add.png' | relative_url }})
 
 4. Update Ansible Inventory:
 
@@ -76,5 +76,5 @@ I hear you, in that case there's a few extra steps we will need.
 
 Now it's time we head to Step 2 to configure JustDeploy\
 <span class="fs-6 float-right"> 
-  [⚙️ Step 2](/tutorials/step2){: .btn }
+  [⚙️ Step 2]({% link tutorials/step2.md %}){: .btn }
 </span>

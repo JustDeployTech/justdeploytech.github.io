@@ -25,4 +25,4 @@ To set up a GitHub access token for authentication, follow these steps:
    - When using the token in your application or scripts, pass it as an authentication header or as a parameter in your API requests.
    - Ensure that your application securely handles the token and doesn't expose it unintentionally.
 
-If you just came here to set this up and are ready to finish off your configs, [click here](/tutorials/step2#github_token) and I'll take you back there.
+If you just came here to set this up and are ready to finish off your configs, [click here]({% link tutorials/step2.md %}#github_token) and I'll take you back there.
