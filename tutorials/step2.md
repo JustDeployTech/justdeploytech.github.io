@@ -63,6 +63,10 @@ Recommended
 - **Default**: `false`
 
 ### `port_number`
+{: .d-inline-block }
+
+Optional
+{: .label .label-yellow }
 
 - **Description**: The port number to which the SSH port will be changed if `change_port` is set to `true`.
 
@@ -94,18 +98,74 @@ Recommended
   - `false`: A web server will not be set up.
 - **Default**: `true`
 
-### `application_port`
+## Application Configuration
 
-- **Description**: The port number on which your application will run. This is the port you've been running your application on developer mode. 
+The application configuration section allows you to specify details about the application to be deployed. You can add multiple applications. Here is an example configuration and what each field means:
 
-### ``application_start_command``
+```yaml
+application:
+  - name: "JustDeploy Homepage"
+    domain: "www.justdeploy.tech justdeploy.tech"
+    description: "JustDeploy helps you deploy your application to your own server in minutes not weeks"
+    repository: "justdeploy/justdeploy.tech"
+    port: 3001
+    start_command: "npm run build; npm run start"
+    variables:
+      - key: "NODE_ENV"
+        value: "production"
+      - key: "PORT"
+        value: "3001"
+```
 
-- **Description**: The command to start the application. This could be something like `npm run build; npm run start` for production.
+### Fields
 
-### `application_variables`
+#### name
 
-- **Description**: Environment variables required for the application.
-- **Format**: List of key-value pairs.
+- **Description**: The name of the application.
+- **Example**: `"JustDeploy Homepage"`
+
+#### domain
+
+- **Description**: The domain(s) where the application will be accessible. Multiple domains can be specified, separated by spaces.
+- **Example**: `"www.justdeploy.tech justdeploy.tech"`
+
+#### description
+
+- **Description**: A brief description of the application.
+- **Example**: `"JustDeploy helps you deploy your application to your own server in minutes not weeks"`
+
+#### repository
+
+- **Description**: The name of the repository where the application code is hosted.
+- **Example**: `"justdeploy/justdeploy.tech"`
+
+#### port
+
+- **Description**: The port number on which your application will run. This is the port you've been running your application on developer mode.
+- **Example**: `3001`
+
+#### start_command
+
+- **Description**: The command to start the application.
+- **Example**: `"npm run dev"` or `"npm run build; npm run start"`
+
+#### variables
+
+- **Description**: Environment variables required for the application, specified as key-value pairs.
+
+##### key
+
+- **Description**: The name of the environment variable.
+- **Example**: `"NODE_ENV"`
+
+##### value
+
+- **Description**: The value of the environment variable.
+- **Example**: `"production"`
+
+By configuring these fields, you can define the specifics of your application deployment, ensuring that it runs correctly with the appropriate settings and environment variables.
+
+## GitHub Configuration
 
 ### `github_username`
 

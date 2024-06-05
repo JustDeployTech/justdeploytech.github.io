@@ -27,7 +27,7 @@ ansible_user=teddy
 
 The `ansible-playbook` command is used to execute Ansible playbooks, which are YAML files containing a series of tasks and configurations to be applied to target hosts.
 
-#### Options:
+### Options:
 
 - `-i inventory`: Specifies the inventory file containing the list of hosts on which the playbook tasks will be executed.
   
@@ -37,9 +37,9 @@ The `ansible-playbook` command is used to execute Ansible playbooks, which are Y
 
 - `-K`: Prompts for the privilege escalation (sudo) password. This option is used when the tasks in the playbook require elevated privileges on the target hosts.
 
-#### All together now:
+### All together now:
 
-Open up your terminal and from within the ` {{site.project}} ` directory execute:
+Open up your terminal and from within the `{{site.project}}` directory execute:
 
 ```shell
 ansible-playbook -i inventory 01.server_setup.yml
@@ -47,7 +47,7 @@ ansible-playbook -i inventory 01.server_setup.yml
 
 ## What's Next?
 
-We're so close. Head to Step 3 to run JustDeploy on your server.\
+The server is configured, it's time we setup your application(s).\
 <span class="fs-6 float-right"> 
-  [🚀 Step 3 >>](/tutorials/step3){: .btn }
+  [🚀 Step 4 >>](/tutorials/step4){: .btn }
 </span>
