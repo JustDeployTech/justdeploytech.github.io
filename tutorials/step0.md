@@ -8,7 +8,7 @@ parent: 📚 Tutorials
 {: .new-title }
 > Don't have access to JustDeploy yet?
 > 
-> It's time to change this. Head to [JustDeploy.tech](https://justdeploy.text) get lifetime access to JustDeploy.
+> It's time to change this. Head to [{{ site.project }}](https://{{ site.domain }}){:target="_blank"} get lifetime access to JustDeploy.
 
 ## Get JustDeploy
 
