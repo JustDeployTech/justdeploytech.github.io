@@ -5,7 +5,7 @@ nav_order: 4
 parent: 📚 Tutorials
 ---
 
-Now that your server is configured, we're ready to setup your application(s). Back in [step 2](/tutorials/step2.html#application-configuration) we configured the `config.yml` file, which contains the settings for your applications. Which means we're nearly good to go.
+Now that your server is configured, we're ready to setup your application(s). Back in [step 2]({% link tutorials/step2.md %}#application-configuration) we configured the `config.yml` file, which contains the settings for your applications. Which means we're nearly good to go.
 
 ## Memory
 
