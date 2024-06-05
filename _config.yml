@@ -5,7 +5,7 @@ color_scheme: dark
 logo: "/assets/images/logo.png"
 favicon_ico: "/assets/images/favicon.ico"
 
-url: https://justdeploytech.github.io
+url: https://justdeploytech.github.io/docs
 
 # Variables across the site
 project: JustDeploy.tech
