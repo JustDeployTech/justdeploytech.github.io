@@ -4,6 +4,7 @@ theme: just-the-docs
 color_scheme: dark
 logo: "/assets/images/logo.png"
 favicon_ico: "/assets/images/favicon.ico"
+# baseurl: "/docs"
 
 url: https://justdeploytech.github.io/docs
 

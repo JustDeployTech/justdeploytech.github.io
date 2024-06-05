@@ -8,7 +8,7 @@ nav_order: 1
 
 Here's a quick overview of this deploying tool. Follow along to get your environment up and running.
 
-Once you're done, start with [this tutorial](/tutorials/step1) to setup your server in 5 minutes. Let's deploy that product, FAST ⚡️
+Once you're done, start with [this tutorial]({{ site.baseurl }}{% link tutorials/step1.md %}) to setup your server in 5 minutes. Let's deploy that product, FAST ⚡️
 
 ### Install Ansible Locally
 
