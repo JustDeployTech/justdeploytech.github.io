@@ -30,23 +30,19 @@ The following error message can occur when you run out of memory while installin
 Execute the following command from your terminal:
 
 ```shell
-ansible-playbook -i inventory 99.extras_setup.yml --tags setup-swap
+ansible-playbook -i inventory 99.extras_setup.yml --tags setup_swap
 ```
 
-This command runs the `99.extras_setup.yml` playbook with the specific tag `setup-swap`, which targets the tasks associated with setting up the swap file.
+This command runs the `99.extras_setup.yml` playbook with the specific tag `setup_swap`, which targets the tasks associated with setting up the swap file.
+
+![Setup Swap]({{ 'assets/images/setup-swap.png' | relative_url }})
 
 ## Verify Swap File Creation
 
-You can verify that the swap file has been created by running the following command on your server:
-
-```shell
-swapon -s
-```
-
-Or simply by rerunning the playbook above and seeing that the task "Create swap file if none exists" and all subsequent tasks are skipped.
+You can rerun the playbook above and see that the task "Create swap file if none exists" and all subsequent tasks are skipped.
 
 ## Conclusion
 
 Using swap is a practical way to extend the available memory on your server, especially when upgrading physical RAM isn't an immediate option. With Ansible, automating the setup of a swap file is straightforward and ensures consistency across your infrastructure.
 
-If you just came here to set this up and are ready to run your applications, [click here]({% link tutorials/step4.md %}) and I’ll take you back there.
+If you just came here to set this up and are ready to run your applications, [click here]({% link tutorials/step4.md %}#memory) and I’ll take you back there.

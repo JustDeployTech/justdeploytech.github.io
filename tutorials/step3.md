@@ -14,15 +14,6 @@ Idempotency is important because it's totally normal to change your mind and wan
 
 If you completely change your mind and want to revert every change this script makes, just go ahead and read about our [teardown task]({% link extras/teardown.md %}).
 
-## Updating the inventory
-
-If you created a new user in the previous step, you'll need to update the inventory file with the new user's username. For security reasons we always like to disable root login in that case, so open up `inventory` for one last time and change the `ansible_user` value to the new user's username. I.e.:
-
-```sh
-[vps:vars]
-ansible_user=teddy
-```
-
 ## Running your first task
 
 The `ansible-playbook` command is used to execute Ansible playbooks, which are YAML files containing a series of tasks and configurations to be applied to target hosts.
@@ -45,9 +36,27 @@ Open up your terminal and from within the `{{site.project}}` directory execute:
 ansible-playbook -i inventory 01.server_setup.yml
 ```
 
+If you're on a Mac, you may see the following error:
+
+```shell
+{"msg": "crypt.crypt not supported on Mac OS X/Darwin, install passlib python module. crypt.crypt not supported on Mac OS X/Darwin, install passlib python module"}
+```
+
+In this case, just run the following on your terminal and try again:
+
+```shell
+pip install passlib
+```
+
+Once you repeat the ansible-playbook command, you can check that your server has been configured by going to your browser and typing in your server's IP address. You should see a page that says "Welcome to nginx".
+
+![Welcome to nginx page]({{ 'assets/images/01-server-setup-nginx.png' | relative_url }})
+
+Pat yourself on the back, you've just configured your server! 🎉
+
 ## What's Next?
 
 The server is configured, it's time we setup your application(s).\
 <span class="fs-6 float-right"> 
-  [🚀 Step 4 >>]({% link tutorials/step4.md %}){: .btn }
+  [🚀 Time to go live >>]({% link tutorials/step4.md %}){: .btn }
 </span>

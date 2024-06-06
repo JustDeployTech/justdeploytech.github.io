@@ -1,7 +1,7 @@
 ---
 title:  Enable Password Authentication
 layout: default
-nav_order: 3.3
+nav_order: 3.2
 parent: 🛸 Extras
 ---
 
@@ -17,6 +17,11 @@ First, you need to open the SSH configuration file, which is typically located a
    ```bash
    sudo nano /etc/ssh/sshd_config
    ```
+
+    {: .important-title }
+    > NOTE
+    >
+    > If using DigitalOcean, the `sshd_config` file may be located at `/etc/ssh/sshd_config.d/50-cloudinit.conf` instead, so make sure you update this.
 
 ### 2. Modify the SSH Configuration File
 
@@ -40,7 +45,7 @@ After making the changes:
 To apply the changes, restart the SSH service using the following command:
 
 ```bash
-sudo systemctl restart sshd
+sudo systemctl restart ssh
 ```
 
 ## Troubleshooting
@@ -49,7 +54,7 @@ sudo systemctl restart sshd
 - Make sure the SSH service restarted without errors by checking its status:
 
   ```sh
-  sudo systemctl status sshd
+  sudo systemctl status ssh
   ```
 
 - Verify that your user account is allowed to log in via SSH and that there are no restrictions in place (e.g., `AllowUsers` or `DenyUsers` directives in `sshd_config`).
@@ -60,5 +65,5 @@ sudo systemctl restart sshd
 
 Click here to head back to configuring JustDeploy\
 <span class="fs-6 float-right"> 
-  [💥 Step 1{% link tutorials/step1.md %}){: .btn }
+  [💥 Step 1]({% link tutorials/step1.md %}#but-security){: .btn }
 </span>

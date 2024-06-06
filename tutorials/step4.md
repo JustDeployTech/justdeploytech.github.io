@@ -7,6 +7,15 @@ parent: 📚 Tutorials
 
 Now that your server is configured, we're ready to setup your application(s). Back in [step 2]({% link tutorials/step2.md %}#application-configuration) we configured the `config.yml` file, which contains the settings for your applications. Which means we're nearly good to go.
 
+## Updating the inventory
+
+If you created a new user in the previous step, you'll need to update the inventory file with the new user's username. For security reasons we always like to disable root login and run everything under a non-root user, so open up `inventory` for one last time and change the `ansible_user` value to the new user's username. I.e.:
+
+```sh
+[vps:vars]
+ansible_user=teddy
+```
+
 ## Memory
 
 Apps need memory to run, and the amount of memory they need can vary. If you're running a small app, you might be able to get away with a small server. If you're running a large app, you might need a larger server.
@@ -25,14 +34,14 @@ In the previous section we've executed a playbook that configured our entire ser
 
 - `-i inventory`: Specifies the inventory file containing the list of hosts on which the playbook tasks will be executed.
 
-- `--ask-pass`: Prompts for the SSH password of the target host. This option is necessary when SSH key-based authentication is not used or available, allowing the user to manually enter the SSH password for connection.
+- `--ask-pass`: Prompts for the SSH password of the target host. This option is necessary when SSH key-based authentication is not used, allowing the user to manually enter the SSH password for connection. This is the password for the new user you've created
 
 ### All together now:
 
 Open up your terminal and from within the `{{site.project}}` directory execute:
 
 ```shell
-ansible-playbook -i inventory 02.application_setup.yml --ask-pass
+ansible-playbook -i inventory 02.application_setup.yml
 ```
 
 This command runs the `02.application_setup.yml` playbook, which contains the tasks to setup your applications. The `--ask-pass` option is used to prompt for the SSH password of the target host.

@@ -1,7 +1,7 @@
 ---
 title:  Tear it all down!
 layout: default
-nav_order: 3.2
+nav_order: 3.6
 parent: 🛸 Extras
 ---
 

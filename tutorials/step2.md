@@ -20,7 +20,7 @@ YOUR_SERVER_IP
 
 [vps:vars]
 ansible_user=
-ansible_ssh_private_key_file=~/.ssh/id_rsa
+ansible_ssh_private_key_file=~/.ssh/id_ed25519
 #ansible_port=23
 ```
 
@@ -165,6 +165,22 @@ application:
 
 By configuring these fields, you can define the specifics of your application deployment, ensuring that it runs correctly with the appropriate settings and environment variables.
 
+Copy and paste the template below if you want to add more applications. You need one of these blocks for each application you want to deploy.
+
+```yaml
+  - name: "Application Name"
+    domain: "www.example.com example.com"
+    description: "Description of the application"
+    repository: "github_username/repository_name"
+    port: 3000
+    start_command: "npm run start"
+    variables:
+      - key: "NODE_ENV"
+        value: "production"
+      - key: "PORT"
+        value: "3000"
+```
+
 ## GitHub Configuration
 
 ### `github_username`
@@ -183,5 +199,5 @@ By configuring these fields, you can define the specifics of your application de
 
 We're so close. Head to Step 3 to run JustDeploy on your server.\
 <span class="fs-6 float-right"> 
-  [🚀 Step 3 >>]({% link tutorials/step3.md %}){: .btn }
+  [🏃‍♀️‍➡️ It's time to run >>]({% link tutorials/step3.md %}){: .btn }
 </span>

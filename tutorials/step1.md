@@ -37,21 +37,34 @@ I hear you, in that case there's a few extra steps we will need.
    - Use the `ssh-keygen` command to generate a new SSH key pair. You can accept the default location and optionally provide a passphrase for added security.
 
     ```bash
-    ssh-keygen -t rsa -b 4096 -C "your_email@example.com"
+    ssh-keygen -t ed25519 -C "your_email@example.com"
     ```
 
-   - This command will generate a new SSH key pair (public and private) and save it to the default location (`~/.ssh/id_rsa` for the private key and `~/.ssh/id_rsa.pub` for the public key).
+   - This command will generate a new SSH key pair (public and private) and save it to the default location (`~/.ssh/id_ed25519` for the private key and `~/.ssh/id_ed25519a.pub` for the public key).
 
 2. Copy Public Key to Remote Server:
 
    - Use the `ssh-copy-id` command to copy your public SSH key to the remote server. Replace username and hostname with your remote server's username and hostname/IP address.
 
     ```bash
-    ssh-copy-id username@hostname
+    ssh-copy-id root@SERVER_IP_ADDRESS
     ```
 
-   - User `-p port_number` to connect to the specified SSH port on the server, instead of the default port 22.
+   {: .important-title }
+   > NOTE
+   >
+   > At this point, you may realize you don't have a root password. If you're using DigitalOcean, you can reset your root password from the DigitalOcean dashboard. If you're using another provider, you may need to contact their support. You may also need to enable password authentication by following the steps here: [Enable Password Authentication]({% link extras/enable-password-authentication.md %})
+
+   - Use `-p port_number` to connect to the specified SSH port on the server, instead of the default port 22.
    - This command will prompt you for your remote server password. Enter it to complete the process. Your public key will be added to the `~/.ssh/authorized_keys` file on the remote server, allowing you to authenticate using your private key.
+
+   If all goes well you should see the following:
+
+   ```bash
+   Number of key(s) added: 1
+   Now try logging into the machine, with:   "ssh 'root@SERVER_IP_ADDRESS'"
+   and check to make sure that only the key(s) you wanted were added.
+   ```
 
 3. Test SSH Connection:
 
@@ -69,12 +82,12 @@ I hear you, in that case there's a few extra steps we will need.
 
     ```bash
     ansible_user=username 
-    ansible_ssh_private_key_file=~/.ssh/id_rsa
+    ansible_ssh_private_key_file=~/.ssh/id_ed25519
     ```
 
 ## What's Next?
 
 Now it's time we head to Step 2 to configure JustDeploy\
 <span class="fs-6 float-right"> 
-  [⚙️ Step 2]({% link tutorials/step2.md %}){: .btn }
+  [⚙️ Configure your server]({% link tutorials/step2.md %}){: .btn }
 </span>

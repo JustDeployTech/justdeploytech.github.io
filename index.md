@@ -66,3 +66,7 @@ This command should display the installed Ansible version.
 > Watch out for the version
 >
 > Make sure you're using version 2.1 or higher. Older versions haven't been tested and might not work.
+
+<span class="fs-6 float-right"> 
+  [Setup your server in 5 minutes]({% link tutorials/step1.md %}){: .btn }
+</span>
