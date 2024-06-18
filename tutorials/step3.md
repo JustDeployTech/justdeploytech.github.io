@@ -12,8 +12,6 @@ Runs are idempotent (/ʌɪdɛmˈpəʊtnt/), which is a fancy way of saying "if y
 
 Idempotency is important because it's totally normal to change your mind and want to do things a little different.
 
-If you completely change your mind and want to revert every change this script makes, just go ahead and read about our [teardown task]({% link extras/teardown.md %}).
-
 ## Running your first task
 
 The `ansible-playbook` command is used to execute Ansible playbooks, which are YAML files containing a series of tasks and configurations to be applied to target hosts.
