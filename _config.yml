@@ -8,7 +8,7 @@ favicon_ico: "/assets/images/favicon.ico"
 url: https://justdeploytech.github.io
 
 # Variables across the site
-project: JustDeploy.tech
+project: justdeploy-ansible
 domain: justdeploy.tech
 
 callouts_level: loud # or loud

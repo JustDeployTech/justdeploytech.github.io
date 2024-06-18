@@ -8,14 +8,14 @@ parent: 📚 Tutorials
 {: .new-title }
 > Don't have access to JustDeploy yet?
 > 
-> It's time to change this. Head to [{{ site.project }}](https://{{ site.domain }}){:target="_blank"} get lifetime access to JustDeploy.
+> It's time to change this. Head to [{{ site.domain }}](https://{{ site.domain }}){:target="_blank"} and get lifetime access to JustDeploy.
 
 ## Get JustDeploy
 
 Open up your terminal and run the following command:
 
 ```bash
-git clone git@github.com:JustDeployTech/DeployTemplate.git
+git clone git@github.com:JustDeployTech/{{site.project}}.git
 ```
 
 Just deploy can be downloaded anywhere but I always recommend downloading it in your home directory or somewhere you'll remember.

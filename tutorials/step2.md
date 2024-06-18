@@ -10,7 +10,7 @@ parent: 📚 Tutorials
 ### Finish your inventory
 {: .fs-5 .text-blue-000 }
 
-While you still have your `{{ site.domain }}/inventory` file open, let's go ahead and add one or two things to it.
+While you still have your `{{ site.project }}/inventory` file open, let's go ahead and add one or two things to it.
 
 Replace `YOUR_SERVER_IP` with the IP address your VPS gave to you. This will look something like `238.162.20.166`.
 
@@ -28,7 +28,7 @@ ansible_ssh_private_key_file=~/.ssh/id_ed25519
 
 ## Configuration Options
 
-Now that you've finished configuring your inventory, go ahead and open up `{{ site.domain }}/config.yml` and change the values you see fit. The default options are mostly fine
+Now that you've finished configuring your inventory, go ahead and open up `{{ site.project }}/config.yml` and change the values you see fit. The default options are mostly fine
 
 ### `install_packages`
 {: .d-inline-block }
