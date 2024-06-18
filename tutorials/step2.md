@@ -14,6 +14,8 @@ While you still have your `{{ site.project }}/inventory` file open, let's go ahe
 
 Replace `YOUR_SERVER_IP` with the IP address your VPS gave to you. This will look something like `238.162.20.166`.
 
+Go [back to step 0]({% link tutorials/step0.md %}#get-your-vps) if you still haven't got a VPS.
+
 ```yaml
 [vps]
 YOUR_SERVER_IP

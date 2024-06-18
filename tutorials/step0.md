@@ -20,6 +20,16 @@ git clone git@github.com:JustDeployTech/{{site.project}}.git
 
 Just deploy can be downloaded anywhere but I always recommend downloading it in your home directory or somewhere you'll remember.
 
+## Get your VPS
+
+I've used DigitalOcean for this tutorial, but you can use any VPS provider you like. Here are some of the most popular ones:
+
+* [DigitalOcean](https://m.do.co/c/014ac47e91cf) ($200 free credits for 60 days with affiliate Link)
+* [Google Could Platform](https://cloud.google.com/gcp)
+* [Amazon Web Services](https://aws.amazon.com/free)
+* [Microsoft Azure](https://azure.microsoft.com/)
+* [Hetzner](https://www.hetzner.com/)
+
 ## What's Next?
 
 Time to officially get this party started! Head to Step 1 to configure your security settings\
