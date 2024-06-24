@@ -102,7 +102,7 @@ Recommended
 
 ## Application Configuration
 
-The application configuration section allows you to specify details about the application to be deployed. You can add multiple applications. Here is an example configuration and what each field means:
+The application configuration section allows you to specify details about the application to be deployed. You can add multiple applications. Here is an example configuration and what each field means. Read [deploying to staging]({% link extras/deploying-to-staging.md %}) to learn how to deploy applications to staging.
 
 ```yaml
 application:
@@ -140,6 +140,16 @@ application:
 
 - **Description**: The name of the repository where the application code is hosted.
 - **Example**: `"justdeploy/justdeploy.tech"`
+
+#### type
+
+- **Description**: The type of deployment. Defaults to `live`. Use `preview` if you'd like top deploy your application in preview mode.
+- **Example**: `preview`
+
+#### branch
+
+- **Description**: The name of the branch where the application code is hosted.
+- **Example**: `feature1`
 
 #### port
 
