@@ -31,7 +31,7 @@ callouts:
 # External navigation links
 nav_external_links:
   - title: Get JustDeploy.tech
-    url: https://www.justdeploy.tech
+    url: https://justdeploy.tech
     opens_in_new_tab: true
 
 # Analytics
