@@ -78,10 +78,11 @@ I hear you, in that case there's a few extra steps we will need.
 
 4. Update Ansible Inventory:
 
-    - Once SSH key-based authentication is working, you can update your Ansible `inventory` file `(vps:vars)` to use the SSH key for authentication instead of a password. Make sure you uncomment `ansible_ssh_private_key_file`
+   - Once SSH key-based authentication is working, you can update your Ansible `inventory` file `(vps:vars)` to use the SSH key for authentication instead of a password. Make sure you uncomment `ansible_ssh_private_key_file`. 
+   - At this point you may still need to use `root` as the `ansible_user` since we're yet to create a new user.
 
     ```bash
-    ansible_user=username 
+    ansible_user=root 
     ansible_ssh_private_key_file=~/.ssh/id_ed25519
     ```
 

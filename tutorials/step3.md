@@ -46,9 +46,9 @@ In this case, just run the following on your terminal and try again:
 pip install passlib
 ```
 
-Once you repeat the ansible-playbook command, you can check that your server has been configured by going to your browser and typing in your server's IP address. You should see a page that says "Welcome to nginx".
+Once you repeat the ansible-playbook command, you can check that your server has been configured by going to your browser and typing in your server's IP address. You should see a page that says "Caddy".
 
-![Welcome to nginx page]({{ 'assets/images/01-server-setup-nginx.png' | relative_url }})
+![Welcome to caddy page]({{ 'assets/images/01-server-setup-caddy.png' | relative_url }})
 
 Pat yourself on the back, you've just configured your server! 🎉
 

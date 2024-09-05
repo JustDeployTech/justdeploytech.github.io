@@ -21,7 +21,7 @@ Go [back to step 0]({% link tutorials/step0.md %}#get-your-vps) if you still hav
 YOUR_SERVER_IP
 
 [vps:vars]
-ansible_user=
+ansible_user=root
 ansible_ssh_private_key_file=~/.ssh/id_ed25519
 #ansible_port=23
 ```
@@ -107,7 +107,8 @@ The application configuration section allows you to specify details about the ap
 ```yaml
 application:
   - name: "JustDeploy Homepage"
-    domain: "www.justdeploy.tech justdeploy.tech"
+    domain: "justdeploy.tech"
+    redirect_domain: "www.justdeploy.tech"
     description: "JustDeploy helps you deploy your application to your own server in minutes not weeks"
     repository: "justdeploy/justdeploy.tech"
     port: 3001
@@ -129,7 +130,11 @@ application:
 #### domain
 
 - **Description**: The domain(s) where the application will be accessible. Multiple domains can be specified, separated by spaces.
-- **Example**: `"www.justdeploy.tech justdeploy.tech"`
+- **Example**: `"justdeploy.tech"`
+
+#### redirect_domain
+
+- **Description**: The domain(s) to which the application will be redirected. Multiple domains can be specified, separated by spaces. But in general you will want to stick to one entry point to your site. In this case we're setting it up to make sure that when the user goes to the `www.` version of the website, they end up redirected to the `non-www`. Either choice is fine for SEO purposes.
 
 #### description
 
@@ -181,7 +186,8 @@ Copy and paste the template below if you want to add more applications. You need
 
 ```yaml
   - name: "Application Name"
-    domain: "www.example.com example.com"
+    domain: "example.com"
+    redirect_domain: "www.example.com"
     description: "Description of the application"
     repository: "github_username/repository_name"
     port: 3000
