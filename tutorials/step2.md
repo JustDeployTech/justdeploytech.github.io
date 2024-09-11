@@ -161,10 +161,15 @@ application:
 - **Description**: The port number on which your application will run. This is the port you've been running your application on developer mode.
 - **Example**: `3001`
 
+#### build_command
+
+- **Description**: The command to build the application.
+- **Example**: `"npm run build"`
+
 #### start_command
 
 - **Description**: The command to start the application.
-- **Example**: `"npm run dev"` or `"npm run build; npm run start"`
+- **Example**: `"npm run dev"` or `"npm run start"`
 
 #### variables
 
@@ -191,6 +196,7 @@ Copy and paste the template below if you want to add more applications. You need
     description: "Description of the application"
     repository: "github_username/repository_name"
     port: 3000
+    build_command: "npm run build"
     start_command: "npm run start"
     variables:
       - key: "NODE_ENV"
